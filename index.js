@@ -1,16 +1,15 @@
-const readline = require('readline');
+let numers = [1,2,3];
+let length = numers.length;
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+const reverseArray = (array,lenth) =>{
+    let newarray = [];
+ 
+    for(let i  = length-1 ; i>=0;i--){
+        newarray.push(array[i]);
+       
+    }
+    console.log(array.join(' '));
+    console.log(newarray.join(' '));
+}
 
-rl.question('Enter number: ', (count) => {
-  //console.log(`Hello, ${count}!`);
-
-  for(let i = 0; i<count;i++){
-    console.log("Hello World");
-  }
-
-  rl.close();
-});
+reverseArray(numers,length);
